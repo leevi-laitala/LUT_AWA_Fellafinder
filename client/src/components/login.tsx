@@ -11,11 +11,10 @@ function LoginComponent() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+    // Error shows if wrong credentials are provided
     const [error, setError] = useState("");
 
-    //useEffect(() => {
-    //})
-    
+    // Evaluate fields and make login request to server
     async function loginUser(event) {
         event.preventDefault();
 

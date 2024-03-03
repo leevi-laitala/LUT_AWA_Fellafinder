@@ -8,7 +8,7 @@ import "./styles/chats.css"
 /* Chat component
  * - Fetches mathed users, and lists them
  * - For selected user, fetches message history
- * - 
+ * - User can send messages to others
  */
 function ChatsComponent() {
     const navigate = useNavigate();

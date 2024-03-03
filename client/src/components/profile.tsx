@@ -3,6 +3,10 @@ import { useNavigate } from "react-router-dom";
 
 import Navbar from "./nav/navprofile";
 
+/*  Profile Component
+ *  - User can update their bio
+ *      - Bio is shown on the swipable cards for other users
+ */
 function ProfileComponent() {
     const navigate = useNavigate();
     const [bio, setBio] = useState("");

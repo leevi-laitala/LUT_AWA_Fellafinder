@@ -3,6 +3,9 @@ import React from "react";
 
 import "../styles/navbar.css";
 
+// Navbar for Registeration
+// - Button to login
+
 function Navbar() {
     const navigate = useNavigate();
 

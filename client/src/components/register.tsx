@@ -5,6 +5,11 @@ import Navbar from "./nav/navregister";
 
 import "./styles/register.css"
 
+/*  Register Component
+ *  - One can register new user
+ *  - User must be over 18 years old
+ *  - There are validations for email and password
+ */
 function RegisterComponent() {
     const navigate = useNavigate();
 
@@ -12,10 +17,12 @@ function RegisterComponent() {
     const [password, setPassword] = useState("");
     const [username, setUsername] = useState("");
     const [age, setAge] = useState("");
-    const [bio, setBio] = useState("joo");
+    const [bio, setBio] = useState("default bio");
 
+    // Used to inform user if there is invalid information given
     const [error, setError] = useState("");
 
+    // Check if age is valid >=18 years old
     function verifyAge(age) {
         const i = parseInt(age);
 
@@ -25,6 +32,8 @@ function RegisterComponent() {
         return i;
     }
     
+    // Gather field data, evaluate them and make request to server
+    // If new user was created successfully, navigate to login page
     async function registerUser(event) {
         event.preventDefault();
 
@@ -44,8 +53,6 @@ function RegisterComponent() {
         form.append("username", username);
         form.append("age", age);
         form.append("bio", bio);
-
-        console.log(form);
 
         const res = await fetch("http://localhost:5001/api/user/register", {
             method: "POST",

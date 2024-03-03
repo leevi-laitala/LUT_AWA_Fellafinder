@@ -8,6 +8,8 @@ import ChatsComponent from "./components/chats";
 import { useState } from "react";
 
 
+// Setup components for their own routes
+// Each route is their own component
 function App() {
     return (
     <BrowserRouter>

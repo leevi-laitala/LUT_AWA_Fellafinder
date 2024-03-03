@@ -3,6 +3,10 @@ import React from "react";
 
 import "../styles/navbar.css";
 
+// Navbar for Profile editor
+// - Button to go to chats
+// - Button to logout
+
 function Navbar() {
     const navigate = useNavigate();
 

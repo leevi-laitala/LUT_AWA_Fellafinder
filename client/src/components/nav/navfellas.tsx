@@ -3,6 +3,11 @@ import React from "react";
 
 import "../styles/navbar.css";
 
+// Navbar for Fellas aka. main app
+// - Button to go to chats
+// - Button to edit profile
+// - Button to logout
+
 function Navbar() {
     const navigate = useNavigate();
 

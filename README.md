@@ -15,7 +15,8 @@ and client is running on port 3000.
 
 First clone the repo:
 ```
-$ git clone https://github.com/leevi-laitala/fellafinder
+$ git clone https://github.com/leevi-laitala/LUT_AWA_Fellafinder.git
+$ cd LUT_AWA_Fellafinder
 ```
 
 Running the server:
