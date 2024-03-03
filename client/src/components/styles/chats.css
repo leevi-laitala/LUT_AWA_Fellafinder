@@ -1,0 +1,47 @@
+textarea {
+    resize: none;
+}
+
+.container {
+    display: flex;
+}
+
+.messages {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.matchlist {
+    width: 25%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.matchUser {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.msgSent {
+    align-self: flex-end;
+    background: #dfd;
+}
+
+.msgReceived {
+    align-self: flex-start;
+    background: #ddf;
+}
+
+.chatinput {
+    width: 100%;
+}
+
+.sendMessage {
+    width: 100%;
+}
