@@ -4,10 +4,12 @@ import mongoose from "mongoose";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 
+// Validators and database models and schemas
 import { emailValidate, pwdValidate, validateToken } from "../validators/validators";
 import { message_t, chatModel, chatSchema } from "../models/chat";
 import { userModel, userSchema } from "../models/user";
 
+// Establish connection to database
 mongoose.connect("mongodb://127.0.0.1:27017/project_testdb");
 const db = mongoose.connection;
 

@@ -5,6 +5,7 @@ import { Strategy, ExtractJwt, StrategyOptions } from "passport-jwt";
 import dotenv from "dotenv";
 import { userModel, userSchema } from "../models/user";
 
+// Use default secret is none provided
 if (!process.env.SECRET) {
     process.env.SECRET = "verysecret";
 }
@@ -25,6 +26,10 @@ interface RequestUser extends Request {
     user: JwtPayload
 }
 
+// Validators for email and password
+// - Only allow valid email
+// - Only allow min 8char pwd with minimum of one uppercase, lowercase, 
+//   number and symbol
 const emailValidate: ValidationChain = body("email").trim().isEmail();
 const pwdValidate: ValidationChain = body("password").isStrongPassword({
     minLength: 8,
@@ -34,6 +39,7 @@ const pwdValidate: ValidationChain = body("password").isStrongPassword({
     minSymbols: 1
 });
 
+// Check if user is authenticated
 function validateToken(req: RequestUser, res, next) {
     passport.authenticate("jwt", 
         { session: false }, 
